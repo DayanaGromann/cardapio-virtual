@@ -1,0 +1,7 @@
+.header{
+    padding: 2%;
+    background-color: rgb(3, 3, 64);
+    color: white;
+    display: flex;
+    justify-content: center;
+}

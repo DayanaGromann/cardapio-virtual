@@ -1,0 +1,8 @@
+.lista{
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20%;
+    
+}

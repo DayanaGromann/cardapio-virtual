@@ -1,0 +1,33 @@
+.produto{
+    border: solid;
+    background-color: rgb(119, 119, 119);
+    margin: 10px;
+    width: 20%;
+    padding: 10px 50px;
+    border-radius: 15px;
+}
+
+.descricao{
+    display: none;
+}
+.produto:hover{
+    background-color: rgb(97, 97, 97);
+    box-shadow: 2px 2px 20px blue;
+}
+
+.produto:hover img{
+    opacity: 70%;
+
+} 
+.produto:hover .imagem{
+    display: none;
+
+} 
+.produto:hover .descricao{
+    display: block;
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+}
+

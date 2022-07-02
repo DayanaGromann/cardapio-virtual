@@ -1,0 +1,78 @@
+.pedidoFechado{
+    background-color: rgb(3, 3, 64);
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.pedidoFechado div{
+    justify-content:left;
+    align-items:initial;
+    color: white;
+}
+.pedidoFechado button{
+    border: none;
+    width: 100%;
+    background-color:rgb(3, 3, 64);
+    margin-top: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.pedidoFechado .info{
+    float: left
+}
+
+.pedidoFechado .itemPedido{
+   display: none;
+}
+
+.pedidoFechado .botaoConfirmacao{
+    display: none;
+}
+.pedidoAberto{
+    background-color: black;
+    color: white;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:70%;
+}
+.pedidoAberto button{
+    border: none;
+    width: 100%;
+    background-color:rgb(3, 3, 64);
+    margin-top: 0;
+    cursor: pointer;
+    color: white;
+}
+
+
+.pedidoAberto .info{
+    background: rgb(3, 3, 64);
+    padding: 1%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.pedidoAberto .botaoConfirmacao{
+    padding:1%;
+    border-radius: 10px;
+    margin: 1%;
+    width: 20%;
+    background-color: grey;
+}
+
+.itensContainer{
+    height:67%;
+    overflow-y: scroll;
+}
+
+.itemPedido button{
+    background-color: rgb(3, 3, 64);
+    width: 10%;
+    margin: 1%;
+    padding: 0.5%;
+}
