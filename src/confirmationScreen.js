@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './confirmationScreen.css'
+import {useNavigate} from 'react-router-dom'
 
-const ConfirmationScreen = ({pedidos, confirmarPedido})=>{
+const ConfirmationScreen = ({confirmarPedido})=>{
 
     const values = {
         nome: '',
@@ -16,7 +17,7 @@ const ConfirmationScreen = ({pedidos, confirmarPedido})=>{
 
     const [cliente, setClient] = useState(values)
     const [pedidoConfirmado, setPedidoConfirmado] = useState(false);
-
+    const navigate = useNavigate()
   
 
     const getClientInfo = (e) => {
@@ -29,7 +30,7 @@ const ConfirmationScreen = ({pedidos, confirmarPedido})=>{
     const registrarPedido = (e)=>{
         e.preventDefault()
         setPedidoConfirmado(true)
-        cliente.estado = "Aguardando confirmação do estabelecimento"
+        cliente.estado = "aguardando confirmação"
 
 
         confirmarPedido(cliente)
@@ -94,13 +95,7 @@ const ConfirmationScreen = ({pedidos, confirmarPedido})=>{
     
         )
     }else{
-        return(
-            <>
-                <h2>{`Olá ${cliente.nome}, Obrigado pela preferência! `}</h2>
-                <h2>Estado do seu pedido:</h2>
-                <h2>{cliente.estado}</h2>
-            </>
-        )
+      navigate('acompanhamento')
     }}
 }
 

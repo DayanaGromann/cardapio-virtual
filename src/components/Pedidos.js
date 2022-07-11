@@ -46,7 +46,7 @@ function Pedidos({removerPedido,pedidos}) {
             
             <div className='info'>
                 <p>{"Quantidade de itens: "+ pedidos.length}</p>
-                <p>{"valor total: "+valorTotal.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}</p>
+                <p>{"valor total: "+ valorTotal.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}</p>
                 <button className='botaoConfirmacao' onClick = {()=>{navigate('confirmar')}}>Confirmar Pedido</button>
             </div>
 

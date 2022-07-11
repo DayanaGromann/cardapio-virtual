@@ -19,7 +19,8 @@ function App() {
   const [products, setProducts] = useState([])
   const [pedidos, setPedidos] = useState([])
   const [indiceComanda, setIndiceComanda] = useState()
-  const [comanda, setComanda] = useState()
+  const [estado, setEstado] = useState()
+ 
   
   useEffect(()=>{
     getProducts()
@@ -50,17 +51,19 @@ function App() {
   }
 
 
-  const confirmarPedido = (cliente)=>{
+  const confirmarPedido =   (cliente)=>{
+    
+
+    
     cliente.indice = indiceComanda;
     const pedidosRef = ref(database, 'comandas/'+ 'comanda'+indiceComanda)
     set(pedidosRef, {pedidos, cliente})
-
-    setComanda({pedidos, cliente})
-    console.log(comanda)
-
+    
     const indiceRef = ref(database, '/' )
     update(indiceRef, {quantidadeComandas : indiceComanda})
+  
   }
+
 
   const inserirPedido = (produto)=>{
     setPedidos([...pedidos, produto])
@@ -91,7 +94,7 @@ function App() {
         <Routes>
           <Route path="/" element = {<HomePage/>}/>
           <Route path='confirmar' element={<ConfirmationScreen pedidos={pedidos} confirmarPedido = {confirmarPedido}/>}/>
-          <Route path='acompanhamento' element = {<Acompanhamento indice = {indiceComanda} />}/>
+          <Route path='confirmar/acompanhamento' element = {<Acompanhamento indice = {indiceComanda} />}/>
         </Routes> 
       </div>
     </Router>
