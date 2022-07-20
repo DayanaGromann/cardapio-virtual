@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cardapio-virtual/static/css/main.54b7c5a1.css",
+    "main.js": "/cardapio-virtual/static/js/main.e2898dba.js",
+    "index.html": "/cardapio-virtual/index.html",
+    "main.54b7c5a1.css.map": "/cardapio-virtual/static/css/main.54b7c5a1.css.map",
+    "main.e2898dba.js.map": "/cardapio-virtual/static/js/main.e2898dba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54b7c5a1.css",
+    "static/js/main.e2898dba.js"
+  ]
+}
